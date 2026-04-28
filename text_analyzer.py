@@ -6,7 +6,7 @@ def count_vowels(text):
     for char in text.lower():
         if char in "aeiou":
             count += 1
-    return count 
+    return count
 
 def count_consonants(text):
     """Dado un texto, retorna la cantidad de consonantes que contiene."""
@@ -23,7 +23,7 @@ def total_letters(text):
     Retorna la cantidad total de letras en el texto.
     Debe USAR las funciones count_vowels y count_consonants.
     """
-    return count_vowels(text) + count_consonants(text) 
+    return count_vowels(text) + count_consonants(text)
 
 def vowel_percentage(text):
     """
@@ -37,8 +37,8 @@ def vowel_percentage(text):
     if total == 0:
         return 0.0
 
-    porcentaje = (count_vowels(text) / total) * 100 
-    return round(porcentaje, 1) 
+    porcentaje = (count_vowels(text) / total) * 100
+    return round(porcentaje, 1)
 
 def analyze_text(text):
     """
@@ -49,9 +49,9 @@ def analyze_text(text):
 
     Ejemplo: analyze_text("hola") → "V:2 C:2 T:4 P:50.0%"
     """
-    vowels = count_vowels(text) 
-    consonants = count_consonants(text) 
-    total = total_letters(text) 
-    percentage = vowel_percentage(text) 
-    
-    return "V:{vowels} C:{consonants} T:{total} P:{percentage}%"
+    vowels = count_vowels(text)
+    consonants = count_consonants(text)
+    total = total_letters(text)
+    percentage = vowel_percentage(text)
+
+    return f"V:{vowels} C:{consonants} T:{total} P:{percentage}%"
